@@ -1,0 +1,18 @@
+1. What is the last value alerted by this code? Why?
+Answer will be 1, because every loop iteration decreases by 1. When i = 0, the loop will stop
+
+2. Which values does the while loop show?
+let i = 0;
+while (++i < 5) alert( i ); < from 1-4
+
+let i = 0;
+while (i++ < 5) alert( i ); < from 1-5
+
+3. Which values get shown by the "for" loop?
+for (let i = 0; i < 5; i++) alert( i );
+for (let i = 0; i < 5; ++i) alert( i );
+For both of them answer will be from 0 to 4
+
+
+
+
