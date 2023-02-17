@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      font-family: monospace;
+      font-weight: bold;
+    }
+
+    .container {
+      width: 500px;
+      margin: 20px auto;
+    }
+
+    h1 {
+      margin-left: 30%;
+      margin-bottom: 40px;
+      font-weight: bold;
+      color: indigo;
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      cursor: pointer;
+      background-color: #ddd;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button:hover {
+      background-color: rgba(255, 0, 0, 0.81);
+    }
+
+    .li-active {
+      text-decoration: line-through;
+      color: rgba(44, 44, 44, 0.48);
+    }
+
+    #button {
+      padding: 10px;
+      background-color: rgba(96, 209, 86, 0.87);
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(223, 187, 253, 0.22);
+      padding: 10px;
+      width: 100%;
+      font-size: 15px;
+      border: 1px solid rgba(160, 160, 160, 0.90);
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>To Do List</h1>
+<div class="container">
+  <input type="text" id="input" placeholder="Item..." />
+  <button id="button" type="submit">➕</button>
+  <ul id="ulist"></ul>
+</div>
+
+<script>
+  const input = document.querySelector("#input");
+  const button = document.querySelector("#button");
+  const ulist= document.querySelector("#ulist");
+
+  button.addEventListener('click', (e) => {
+    if (input.value === '') return
+    inputDelIl(input.value)
+    input.value = '';
+  })
+
+  function inputDelIl(value){
+
+    const li = document.createElement('li');
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.className = 'checkbox';
+    li.appendChild(checkbox);
+
+    const label = document.createElement('label');
+    label.textContent = value;
+    li.appendChild(label);
+
+    const button = document.createElement('button');
+    button.className = 'button';
+    button.innerHTML = '❌'
+    li.appendChild(button);
+    button.addEventListener('click', (e) => {
+      ulist.removeChild(li);
+    })
+
+    checkbox.addEventListener('change', (e) => {
+      if (checkbox.checked) {
+        label.classList.add('li-active');
+      } else {
+        label.classList.remove('li-active');
+      }
+    })
+
+    ulist.appendChild(li);
+  }
+</script>
+
+</body>
+</html>
