@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15rem;
+}
+
+.top-bar {
+  width: 100%;
+  background-color: #1976d2;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4rem;
+  justify-content: center;
+}
+
+
+.top-bar h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
