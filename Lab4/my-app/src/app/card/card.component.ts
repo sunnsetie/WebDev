@@ -20,7 +20,7 @@ export class CardComponent {
 
   shareOnTelegram(card: ICard) {
     const message = `Check out this product: ${card.title} for ${card.price}₸ at ${card.link}`;
-    const url = `tg://msg?text=${encodeURIComponent(message)}`;
+    const url = `tg://send?text=${encodeURIComponent(message)}`;
     window.location.href = url;
   }
 }
