@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "a3d0351a-5dad-412c-8e3f-e3c7bbaa8dda",
+		"name": "Lab9Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "show companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show vacancies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vacancies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vacancies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show 1 company",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show 1 vacancy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vacancies/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vacancies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/companies/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
